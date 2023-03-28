@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body {
+    background: #40e0d0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ff0080,
+      #ff8c00,
+      #40e0d0
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ff0080,
+      #ff8c00,
+      #40e0d0
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+.todo-list{
+    margin: auto;
+    margin-top: 10rem;
+    width: 500px;
+    padding: 1rem;
+    box-shadow: 5px 5px;
+    background-color: aliceblue;
+}
