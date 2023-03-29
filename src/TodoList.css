@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+*{
+  font-family: 'Noto Sans', sans-serif;
+}
 body {
     background: #40e0d0; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -13,7 +16,6 @@ body {
       #ff8c00,
       #40e0d0
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: 'Noto Sans', sans-serif;
   }
   
 .todo-list{
@@ -23,4 +25,71 @@ body {
     padding: 1rem;
     box-shadow: 5px 5px;
     background-color: aliceblue;
+}
+.todo-list h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.add-todo-form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.todo-input{
+    width: 80%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.todo-btn{
+    /* width: 15%; */
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.add-todo-btn{
+    background-color: #40e0d0;
+}
+.delete-todo-btn{
+    background-color: #ff8c00;
+}
+.edit-todo-input{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #40e0d0;
+    border-radius: 5px;
+}
+.completed{
+    text-decoration: line-through;
+}
+.todo-btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-btn-container button{
+    margin-left: 1rem;
+}
+.check-todo-btn{
+    background-color: #502deb;
+}
+.uncheck-todo-btn{
+    background-color: #ff0080;
+}
+.p-0{
+    padding: 0;
+}
+.p-05{
+    padding: 0.5rem;
 }
