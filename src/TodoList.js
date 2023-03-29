@@ -44,7 +44,6 @@ const TodoList = () => {
       `https://jsonplaceholder.typicode.com/todos/${id}`,
       updates
     );
-    console.log(updates);
     setEditedTodo(null);
   };
 
