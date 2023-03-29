@@ -33,16 +33,21 @@ const TodoList = () => {
     setNewTodoTitle('');
   };
 
-  const editTodo = async (id, updates) => {
+  const editTodo = (id, updates) => {
+    setTodos(
+      todos.map((todo) => (todo.id === id ? { ...todo, ...updates } : todo))
+    );
+  };
+
+  const updateTodo = async (id, updates) => {
     const response = await axios.put(
       `https://jsonplaceholder.typicode.com/todos/${id}`,
       updates
     );
-    setTodos(
-      todos.map((todo) => (todo.id === id ? { ...todo, ...response.data } : todo))
-    );
+
     setEditedTodo(null);
   };
+
 
   const deleteTodo = async (id) => {
     await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
@@ -76,7 +81,7 @@ const TodoList = () => {
                 onChange={(e) =>
                   editTodo(todo.id, { title: e.target.value, completed: todo.completed })
                 }
-                onBlur={() => setEditedTodo(null)}
+                onBlur={() => updateTodo(todo.id, { title: todo.title, completed: todo.completed })}
               />
             ) : (
               <>
